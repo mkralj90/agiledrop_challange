@@ -1,0 +1,3 @@
+services:
+  event_countdown.date_calculator:
+    class: Drupal\event_countdown\DateCalculator

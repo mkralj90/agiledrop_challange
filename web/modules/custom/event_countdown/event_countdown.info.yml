@@ -1,0 +1,4 @@
+name: Event Countdown
+description: Countdown to events
+type: module
+core_version_requirement: ^8 || ^9
