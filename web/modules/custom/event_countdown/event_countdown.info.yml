@@ -1,4 +1,4 @@
 name: Event Countdown
-description: Countdown to events
+description: Custom module to calculate the time to events
 type: module
 core_version_requirement: ^8 || ^9

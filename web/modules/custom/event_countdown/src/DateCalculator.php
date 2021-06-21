@@ -4,11 +4,12 @@ namespace Drupal\event_countdown;
 
 class dateCalculator{
 
+
   public function EventCountdown($date) {
     $difference = $this->Difference($date);
     // future event
     if($difference >= 1) {
-      return $difference . " " .  "days left until event starts";
+      return $difference . " days left until event starts";
       // same day event
     } else if($difference == 0) {
       return "This event is happening today";
@@ -16,7 +17,10 @@ class dateCalculator{
     } else{
       return "This event already passed " . abs($difference) . " days ago" ;
     }
+
   }
+
+
   // difference between now and event date
   public function Difference($date) {
 

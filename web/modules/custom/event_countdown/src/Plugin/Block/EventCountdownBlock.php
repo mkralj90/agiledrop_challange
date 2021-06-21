@@ -18,15 +18,14 @@ use Drupal\Core\Block\BlockBase;
 
 class EventCountdownBlock extends BlockBase {
 
-
   public function build() {
-    //
+
     $node = Drupal::routeMatch()->getParameter('node');
-    //
+
     if ($node->getType() == "event") {
-      //
+
       $date = $node->field_date->value;
-      //
+
       $output = Drupal::service('event_countdown.date_calculator')->EventCountdown($date);
     }
       return [
