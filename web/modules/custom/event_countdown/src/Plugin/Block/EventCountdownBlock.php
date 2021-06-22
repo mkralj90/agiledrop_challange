@@ -20,14 +20,20 @@ class EventCountdownBlock extends BlockBase {
 
   public function build() {
 
-    $node = Drupal::routeMatch()->getParameter('node');
+    if($node = Drupal::routeMatch()->getParameter('node')) {
 
-    if ($node->getType() == "event") {
+      if ($node->getType() == "event") {
 
-      $date = $node->field_date->value;
+        $date = $node->field_date->value;
 
-      $output = Drupal::service('event_countdown.date_calculator')->EventCountdown($date);
+        $output = Drupal::service('event_countdown.date_calculator')
+          ->EventCountdown($date);
+      }
+
+    }else{
+      $output = "this block is intended for events page only !!!";
     }
+
       return [
 
         '#markup' => $output,
