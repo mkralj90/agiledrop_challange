@@ -2,32 +2,51 @@
 
 namespace Drupal\event_countdown;
 
+use Drupal\Core\Datetime\DrupalDateTime;
+
 class dateCalculator{
 
 
   public function EventCountdown($date) {
     $difference = $this->Difference($date);
+
+    if($difference == 1){
+      $days = "day";
+    }elseif($difference == -1){
+      $days = "day";
+    }else{
+      $days = "days";
+    }
+
     // future event
     if($difference >= 1) {
-      return $difference . " days left until event starts";
+      return $difference . " " . $days . " left until event starts";
       // same day event
-    } else if($difference == 0) {
+    } elseif($difference == 0) {
       return "This event is happening today";
       // past event
     } else{
-      return "This event already passed " . abs($difference) . " days ago" ;
+      return "This event already passed " .abs($difference) . " " . $days .  " ago" ;
     }
 
   }
 
-
   // difference between now and event date
   public function Difference($date) {
 
-    $now = time();
-    $event_date = strtotime($date);
-    $difference = $event_date - $now;
-    return round($difference / (60 * 60 * 24));
+    $now = new DrupalDateTime();
+    $now->setTime(0,0);
+    $time_now = $now->getTimestamp();
+
+    $event_date = new DrupalDateTime($date);
+    $event_date->setTime(0,0);
+    $time_event = $event_date->getTimestamp();
+
+    $difference = $time_event - $time_now;
+
+
+    return $difference / 86400;
+
   }
 
 } // end of class

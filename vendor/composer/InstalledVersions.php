@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'caa78f8c75b44d02855970352b43de7f85b639ea',
+    'reference' => 'a2696f439a45887da22d266a7b9c6588198d4a5b',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -872,7 +872,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'caa78f8c75b44d02855970352b43de7f85b639ea',
+      'reference' => 'a2696f439a45887da22d266a7b9c6588198d4a5b',
     ),
     'drupal/responsive_image' => 
     array (
@@ -1041,6 +1041,15 @@ private static $installed = array (
       array (
         0 => '9.2.0',
       ),
+    ),
+    'drush/config-extra' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6bd3d5aa3ca7625115683f6e687285a3f1c48a54',
     ),
     'drush/drush' => 
     array (
@@ -1251,8 +1260,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '^1.0',
+        0 => '^1.0',
+        1 => '1.0',
       ),
     ),
     'psr/event-dispatcher-implementation' => 

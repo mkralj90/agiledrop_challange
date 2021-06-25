@@ -88,6 +88,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/grasmash/yaml-expander" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/drush/drush" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/drush/config-extra" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -26,14 +26,16 @@ class EventCountdownBlock extends BlockBase {
 
         $date = $node->field_date->value;
 
+
         $output = Drupal::service('event_countdown.date_calculator')
           ->EventCountdown($date);
+      }else{
+        $output = "this block is intended for events page only !!!";
       }
 
     }else{
       $output = "this block is intended for events page only !!!";
     }
-
       return [
 
         '#markup' => $output,
