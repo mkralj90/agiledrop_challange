@@ -2,6 +2,7 @@
 
 namespace Drupal\event_countdown;
 
+use DateTimeZone;
 use Drupal\Core\Datetime\DrupalDateTime;
 
 class dateCalculator{
@@ -43,7 +44,6 @@ class dateCalculator{
     $time_event = $event_date->getTimestamp();
 
     $difference = $time_event - $time_now;
-
 
     return $difference / 86400;
 
