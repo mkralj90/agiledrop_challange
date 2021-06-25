@@ -2,7 +2,6 @@
 
 namespace Drupal\event_countdown;
 
-use DateTimeZone;
 use Drupal\Core\Datetime\DrupalDateTime;
 
 class dateCalculator{
